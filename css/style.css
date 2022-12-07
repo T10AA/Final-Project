@@ -2,7 +2,8 @@
 .header-Main {
     display: flex;
     justify-content: space-between;
-    padding: 45px 140px;
+    padding: 30px 110px;
+    align-items: center;
 }
 .navigation-list {
     display: flex;
@@ -61,6 +62,7 @@
     height: 915px;
     background-image: url('../images/girl-resting-after-exercises-gym_152625-820_auto_x2_auto_x2.jpg');
     color: white;
+    background-position: right;
 }
 .first-section p {
     font-size: 30px;
@@ -80,6 +82,264 @@
     margin-left: 242px;
     text-align: center;
     padding-top: 28px;
-    border-radius: 20px;
+    border-radius: 10px;
     margin-top: 20px;
+    font-size: 30px;
+    color: black;
+}
+.pricingMainbox {
+    display: flex;
+    justify-content: center;
+    margin-top: 109px;
+    margin-bottom: 252px;
+}
+.priceRange {
+    width: 475px;
+    height: 283px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+.priceRange.FirstBox {
+    background-image: url('../images/Group\ 135.jpg');
+}
+.priceRange.SecondBox {
+    background-image: url('../images/Group\ 136.jpg');
+    margin-left: 21px;
+    margin-right: 21px;
+}
+.priceRange.thirdBox {
+    background-image: url('../images/Group\ 137.jpg');
+}
+.priceRange h4 {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+.priceRange div {
+    width: 135px;
+    height: 39px;
+    padding: 8px 37px;
+    margin-top: 26px;
+}
+.priceRange.FirstBox div {
+    background-color: #FF6C2C;
+}
+.priceRange.SecondBox div {
+    background-color: #945B9F;
+}
+.priceRange.thirdBox div {
+    background-color: #5EB6E1;
+}
+
+/* section 2 styling */
+.section2 {
+    display: flex;
+    justify-content: space-around;
+}
+.S2-leftbox {
+    max-width: 620px;
+    height: 674px;
+    margin-top: 242px;
+}
+.S2-leftbox span {
+    font-size: 15px;
+    color: #FF6C2C;
+}
+.S2-leftbox h2 {
+    font-size: 60px;
+    margin-bottom: 72px;    
+}
+.S2-leftbox :nth-child(3) {    
+    color: #FF6C2C;
+    margin-bottom: 40px;
+}
+.S2-leftbox p {
+    font-size: 30px;    
+}
+.S2-rightbox {
+    max-width: 810px;
+    height: 674px;
+    display: flex;
+    justify-content: center;    
+}
+.imageBox1 {
+    height: 930px; 
+    display: flex;
+    align-items: center;   
+}
+.imageBox2 {
+    height: 930px; 
+    margin-left: 51px;
+}
+.imageBox2 :nth-child(1) {
+    margin-bottom: 51px;
+}
+.S2-leftbox div {
+    max-width: 240px;
+    height: 74px;
+    background-color: #5EB6E1;  
+    border-radius: 15px;
+    padding: 25px 70px; 
+    margin-top: 49px; 
+}
+
+/* section 3 styling */
+.S3imagebox {
+    width: 33%;
+    height: 499px; 
+    position: relative;   
+}
+.ImageWraper {
+    display: flex;
+    flex-wrap: wrap;
+}
+.Section3MainBox {
+    margin-top: 20px;
+    background-color: black; 
+    padding-top: 120px;   
+}
+.Section3MainBox h2 {
+    color: white;
+    font-size: 60px;
+    text-align: center;
+    margin-bottom: 67px;
+    font-family: 'Futura PT Demi';
+}
+.Section3MainBox p {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    max-width: 1275px;
+    margin: 0 auto;
+    margin-bottom: 125px;
+    font-family: 'Futura PT Demi';
+}
+.opacityBox {
+    width: 635px;
+    height: 134px;
+    background-color: black;
+    opacity: 58%;
+    color: white;
+    position: absolute;  
+    top: 365px;
+    z-index: 10;
+}
+.S3imagebox p {
+    position: absolute;
+    top: 415px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 13;
+}
+
+/* section 4 styling */
+.S4TrainersBox {
+    display: flex;
+    justify-content: center;
+}
+.S4TrainersBox :nth-child(2) {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.fourthSection h2 {
+    text-align: center;
+    font-size: 60px;
+    margin-top: 165px;
+}
+.textAboutTeam {
+    text-align: center;
+    font-size: 30px;    
+    max-width: 1275px;
+    margin: 0 auto;
+    margin-bottom: 62px;
+    margin-top: 68px;
+    font-family: 'Futura PT Demi';
+}
+.Trainers {
+    height: 650px;
+    box-shadow: 2px 5px #888888;
+}
+.Trainers h3 {
+    font-size: 35px;
+    text-align: center;
+    margin-top: 26px;
+    margin-bottom: 15px;
+}
+.Trainers p {
+    font-size: 25px;
+    text-align: center;
+}
+.S4pressButton {
+    max-width: 340px;
+    height: 74px;
+    background-color: #5EB6E1;  
+    border-radius: 15px;
+    padding: 25px 60px;
+    font-size: 25px;
+    margin: 60px auto;
+}
+
+/* section 5 styling */
+.S5MainBox {
+    max-width: 1920px;
+    height: 836px;
+    background-color: black;
+    position: relative;
+}
+.Slider-arrow {
+    color: #5EB6E1;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+}
+.Slider-arrow.left {
+    left: 50px;
+}
+.Slider-arrow.right {
+    right: 50px;
+}
+/* section 6 styling */
+.Section6 h2 {
+    font-size: 60px;
+    margin-top: 171px;
+    margin-bottom: 89px;
+    text-align: center;
+}
+.NewsBox {
+    width: 390px;
+    height: 522px;
+    background-color: black;
+    padding: 30px;
+}
+.NewsMainBox {
+    display: flex;
+    justify-content: center;
+}
+.NewsMainBox :nth-child(2) {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.NewsBox h4 {
+    color: #5EB6E1;
+    font-size: 20px;
+    margin-top: 45px;
+    margin-bottom: 50px;
+    line-height: 1.5;
+}
+.NewsBox p {
+    color: #BBBBBB;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.Section6PressButton {
+    max-width: 340px;
+    height: 74px;
+    background-color: #5EB6E1;  
+    border-radius: 15px;
+    padding: 25px 90px;
+    font-size: 25px;
+    margin: 60px auto;
 }
