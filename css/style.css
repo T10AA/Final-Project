@@ -326,7 +326,7 @@
     color: #5EB6E1;
     font-size: 20px;
     margin-top: 45px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     line-height: 1.5;
 }
 .NewsBox p {
@@ -343,3 +343,49 @@
     font-size: 25px;
     margin: 60px auto;
 }
+/* section 7 styling */
+.ContactSection {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+}
+.ContactLeftBox {
+    max-width: 581px;
+    height: 795px;
+}
+
+/* footer styling */
+.footerwraper {
+    height: 580px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 60px 10px;
+    border: 2px solid #5EB6E1;
+}
+.footerwraper :nth-child(1) {
+    position: relative;
+}
+.FooterIcon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.contacttitle {
+    font-size: 35px;
+    margin-bottom: 40px;
+    margin-top: 90px;
+}
+.contactInfoList li {
+    color: #5EB6E1;
+    margin-bottom: 20px;
+}
+.contactInfoList li a {
+    color: white;
+    margin-left: 15px;    
+}
+.ContactMap {
+    box-shadow: 10px 10px 20px  #5EB6E1;
+}  
+   
