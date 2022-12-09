@@ -1,9 +1,24 @@
 /* header styling */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100; 
+    width: 100%;   
+}
+.header-Main.scrollingHeader {
+    background-color: #5EB6E1;
+    opacity: 60%;
+}
+body {
+    padding-top: 100px;
+}
 .header-Main {
     display: flex;
     justify-content: space-between;
     padding: 30px 110px;
     align-items: center;
+    
 }
 .navigation-list {
     display: flex;
@@ -11,6 +26,7 @@
     font-size: 24px;
     text-transform: capitalize;
     font-family: 'Futura PT Demi';
+    margin-left: 100px;
 }
 .navigation-list li {
     margin-right: 70px;
@@ -66,20 +82,20 @@
 }
 .first-section p {
     font-size: 30px;
-    margin-left: 242px;
+    margin-left: 200px;
     padding-top: 310px;
 }
-.first-section h2 {
+.first-section h1 {
     font-size: 75px;
     max-width: 910px;
-    margin-left: 242px;
+    margin-left: 200px;
     line-height: 1.3;
 }
 .first-section div {
     max-width: 260px;
     height: 90px;
     background-color: #5EB6E1;
-    margin-left: 242px;
+    margin-left: 200px;
     text-align: center;
     padding-top: 28px;
     border-radius: 10px;
@@ -148,6 +164,7 @@
     color: #FF6C2C;
 }
 .S2-leftbox h2 {
+    max-width: 535px;
     font-size: 60px;
     margin-bottom: 72px;    
 }
@@ -184,54 +201,25 @@
     padding: 25px 70px; 
     margin-top: 49px; 
 }
-
 /* section 3 styling */
-.S3imagebox {
-    width: 33%;
-    height: 499px; 
-    position: relative;   
-}
-.ImageWraper {
-    display: flex;
-    flex-wrap: wrap;
-}
-.Section3MainBox {
-    margin-top: 20px;
-    background-color: black; 
-    padding-top: 120px;   
-}
-.Section3MainBox h2 {
-    color: white;
-    font-size: 60px;
-    text-align: center;
-    margin-bottom: 67px;
-    font-family: 'Futura PT Demi';
-}
-.Section3MainBox p {
-    color: white;
-    font-size: 30px;
-    text-align: center;
-    max-width: 1275px;
-    margin: 0 auto;
-    margin-bottom: 125px;
-    font-family: 'Futura PT Demi';
-}
-.opacityBox {
-    width: 635px;
-    height: 134px;
+.S3MainBox {
+    max-width: 1920px;
+    height: 836px;
     background-color: black;
-    opacity: 58%;
-    color: white;
-    position: absolute;  
-    top: 365px;
-    z-index: 10;
+    position: relative;
 }
-.S3imagebox p {
+.Slider-arrow {
+    color: #5EB6E1;
     position: absolute;
-    top: 415px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 13;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+}
+.Slider-arrow.left {
+    left: 50px;
+}
+.Slider-arrow.right {
+    right: 50px;
 }
 
 /* section 4 styling */
@@ -244,7 +232,8 @@
     margin-right: 20px;
 }
 .fourthSection h2 {
-    text-align: center;
+    max-width: 385px;
+    margin: 0 auto;
     font-size: 60px;
     margin-top: 165px;
 }
@@ -280,33 +269,62 @@
     font-size: 25px;
     margin: 60px auto;
 }
-
 /* section 5 styling */
-.S5MainBox {
-    max-width: 1920px;
-    height: 836px;
+.S5imagebox {
+    width: 33%;
+    height: 499px; 
+    position: relative;   
+}
+.ImageWraper {
+    display: flex;
+    flex-wrap: wrap;
+}
+.Section5MainBox {
+    margin-top: 20px;
+    background-color: black; 
+    padding-top: 120px;   
+}
+.Section5MainBox h2 {
+    color: white;
+    font-size: 60px;
+    max-width: 310px;
+    margin: 0 auto;
+    margin-bottom: 67px;
+    font-family: 'Futura PT Demi';
+}
+.Section5MainBox p {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    max-width: 1275px;
+    margin: 0 auto;
+    margin-bottom: 125px;
+    font-family: 'Futura PT Demi';
+}
+.opacityBox {
+    width: 635px;
+    height: 134px;
     background-color: black;
-    position: relative;
+    opacity: 58%;
+    color: white;
+    position: absolute;  
+    top: 365px;
+    z-index: 10;
 }
-.Slider-arrow {
-    color: #5EB6E1;
+.S5imagebox p {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 40px;
+    top: 415px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 13;
 }
-.Slider-arrow.left {
-    left: 50px;
-}
-.Slider-arrow.right {
-    right: 50px;
-}
+
 /* section 6 styling */
 .Section6 h2 {
     font-size: 60px;
-    margin-top: 171px;
-    margin-bottom: 89px;
-    text-align: center;
+    margin: 171px auto 89px auto;
+    max-width: 320px;
+    
 }
 .NewsBox {
     width: 390px;
@@ -388,4 +406,28 @@
 .ContactMap {
     box-shadow: 10px 10px 20px  #5EB6E1;
 }  
-   
+
+
+h2 {    
+    position: relative;
+    text-decoration: none;
+    transition: all 0.5s linear;
+}
+h2::after {
+    content: ' ';
+    position: absolute;
+    left:0;
+    bottom:0;
+    height: 3px;
+    width:20%;
+    background-color: #5EB6E1;
+    transition: all 0.5s linear;
+    border-radius: 25%;
+}
+h2:hover {
+    font-size: 50px;
+}
+
+h2:hover::after {
+    width: 100%;
+}
