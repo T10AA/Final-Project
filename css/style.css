@@ -102,7 +102,9 @@ body {
     margin-top: 20px;
     font-size: 30px;
     color: black;
+    cursor: pointer;
 }
+
 .pricingMainbox {
     display: flex;
     justify-content: center;
@@ -158,6 +160,12 @@ body {
     max-width: 620px;
     height: 674px;
     margin-top: 242px;
+    position: relative;
+}
+
+.Added-Div h3 {
+    font-size: 50px;
+    text-align: center;
 }
 .S2-leftbox span {
     font-size: 15px;
@@ -207,6 +215,13 @@ body {
     height: 836px;
     background-color: black;
     position: relative;
+    padding-top: 80px;
+}
+.S3MainBox h2 {
+    color: white;
+    width: 340px;
+    font-size: 60px;
+    margin: 0 auto;
 }
 .Slider-arrow {
     color: #5EB6E1;
@@ -221,6 +236,75 @@ body {
 .Slider-arrow.right {
     right: 50px;
 }
+.Users_main {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 550px;  
+    margin: 60px auto; 
+    flex-wrap: wrap; 
+}
+.Users_main li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+.Users_main img {
+    border-radius: 50%;
+    margin-bottom: 40px;
+    margin-top: 30px;
+    width: 150px;
+    height: 150px;
+}
+.Users_main img:hover {
+    border: 4px solid #5EB6E1;
+    box-shadow: 3px 4px 5px 5px #5EB6E1;
+}
+.ComBTN {
+    width: 280px;
+    height: 60px;
+    background-color: #5EB6E1;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin: 20px auto;
+    cursor: pointer; 
+    color: white;
+}
+.ComBTN.passive {
+    display: none;
+}
+.Cross {
+    font-size: 55px;
+    color: #5EB6E1;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    cursor: pointer;
+    display: none;    
+}
+.Cross.active {
+    display: block;
+}
+
+.contact_staff {
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #5EB6E1;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 30px;
+    display: none;
+}
+.contact_staff.active {
+    display: block;
+}
+
 
 /* section 4 styling */
 .S4TrainersBox {
@@ -232,7 +316,7 @@ body {
     margin-right: 20px;
 }
 .fourthSection h2 {
-    max-width: 385px;
+    max-width: 450px;
     margin: 0 auto;
     font-size: 60px;
     margin-top: 165px;
@@ -268,6 +352,7 @@ body {
     padding: 25px 60px;
     font-size: 25px;
     margin: 60px auto;
+    cursor: pointer;
 }
 /* section 5 styling */
 .S5imagebox {
@@ -302,7 +387,7 @@ body {
     font-family: 'Futura PT Demi';
 }
 .opacityBox {
-    width: 635px;
+    width: 100%;
     height: 134px;
     background-color: black;
     opacity: 58%;
@@ -318,6 +403,25 @@ body {
     transform: translateX(-50%);
     z-index: 13;
 }
+.firstimg {
+    background-image: url('../images/fit-young-woman-lifting-barbells-looking-focused-working-out-gym_155003-5353.jpg');
+}
+.secondimg {
+    background-image: url('../images/woman-doing-exercise-gym_116124-203.jpg');
+}
+.thirdimg {
+    background-image: url('../images/fitness-days-gorgeous-blonde-woman-gym-her-weekend-time_146671-17084.jpg');
+}
+.fourthimg {
+    background-image: url('../images/woman-exercising-with-dumbbell-muscle-gym_116317-294.jpg');
+}
+.fifthimg {
+    background-image: url('../images/senior-woman-doing-abs-yoga-mat_23-2148282954.jpg');
+}
+.sixthimg {
+    background-image: url('../images/keep-holding-gorgeous-blonde-woman-gym-her-weekend-time_146671-16987.jpg');
+}
+
 
 /* section 6 styling */
 .Section6 h2 {
@@ -365,12 +469,80 @@ body {
 .ContactSection {
     display: flex;
     justify-content: space-between;
-    background-color: black;
+    background-color: black;    
 }
 .ContactLeftBox {
-    max-width: 581px;
+    width: 581px;
     height: 795px;
+    margin-top: 125px;
+    margin-left: 70px;
 }
+.ContactLeftBox h2 {
+    font-size: 60px;
+    color: white;
+    margin-bottom: 65px;
+}
+.Form_wraper {
+    max-width: 600px;
+    color: #5EB6E1;
+}
+.Input_block,
+.select,
+.Text_Area {
+    height: 63px;
+    background-color: black;
+    width: 100%;
+    /* margin-top: 30px;   */
+    border: 1px solid #5EB6E1;  
+    resize: none;
+    color: #5EB6E1;
+}
+.Input_block {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.Text_Area {
+    height: 188px;      
+    resize: none;
+    font-style: italic;
+}
+.Input_block:focus,
+.select:focus,
+.Text_Area:focus {
+    outline: none;
+}
+.select {
+    color: #BBBBBB
+}
+.select:focus {
+    color: #5EB6E1;
+}
+.select option {
+    color: #5EB6E1;
+}
+.Click_BTN {
+    width: 100%;
+    border-radius: 10px;
+    background-color: #5EB6E1;
+    height: 63px;
+    margin-top: 30px;
+}
+.Checked {
+    display: none;
+}
+.Checked.valid_checked {
+    display: block;
+    color: #5EB6E1; 
+    margin-bottom: 30px;  
+}
+.Text_Area {
+    margin-top: 30px;
+}
+.ContactRightBox {
+    width: 581px;
+    background-image: url('../images/female-bodybuilder-training-with-dumbbells.jpg');
+}
+
 
 /* footer styling */
 .footerwraper {

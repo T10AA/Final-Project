@@ -1,0 +1,18 @@
+@media (max-width: 1530px) {
+    .ContactRightBox {
+        width: 550px;
+    }
+    .ContactLeftBox {
+        width: 550px;
+        margin-right: 30px;        
+    }
+    
+}
+@media (max-width: 1450px) {
+    .Trainers {
+        max-width: 400px;
+    }
+    .Trainers img {
+        max-width: 100%;
+    }
+}
