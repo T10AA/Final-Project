@@ -563,6 +563,7 @@ body {
     background-color: #5EB6E1;
     height: 63px;
     margin-top: 30px;
+    cursor: pointer;
 }
 .Checked {
     display: none;

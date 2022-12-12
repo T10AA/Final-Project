@@ -209,7 +209,6 @@
     .S4TrainersBox {
         flex-direction: column;
         align-items: center;
-        justify-content: center;
     }
     .Trainers {
         height: 550px;
@@ -222,10 +221,14 @@
         height: 315px;
     }
     .first-section h1 {
-        font-size: 30px;
+        font-size: 35px;
+        max-width: 310px;
     }
     .first-section p {
         font-size: 15px;
+    }
+    .first-section {
+        background-position: 75% 100%;
     }
     
 }
@@ -278,4 +281,120 @@
     .first-section div {        
         margin-left: 10px;       
     } 
+    .Users_main li {
+        width: 100%;
+    }
+    .S3MainBox h2 {
+        font-size: 35px;
+    }   
+    
 }
+@media (max-width: 390px) {
+    .imageBox2 img{
+        height: 370px;
+        width: 250px;        
+    }
+    .priceRange {
+        width: 270px;
+        height: 243px;
+    }
+    .priceRange h4 {
+        font-size: 15px;
+    }
+    .priceRange p {
+        font-size: 10px;
+    }
+    .priceRange.SecondBox {
+        margin: 0;
+    }
+    .NewsBox img {
+        width: 250px;
+    }
+    .NewsBox p {
+        font-size: 15px;
+    }
+    .NewsBox h4 {
+        font-size: 20px;
+    }
+    .contacttitle {
+        font-size: 20px;
+    }
+    .contacttitle:hover {
+        font-size: 25px;
+    }
+    .contactInfoList li a {
+        font-size: 15px;    
+    }
+    .contactInfoList li span {
+        font-size: 20px;    
+    }
+    .ContactMap {
+        width: 280px;
+        height: 280px;
+    }
+    .header-Main {        
+        padding: 30px 20px;
+    } 
+    .S5imagebox {
+        height: 350px;
+    }  
+    .opacityBox {
+        top: 216px;
+    }      
+    .S5imagebox p {
+        top: 271px;        
+    }  
+    .Trainers {
+        height: 500px;
+        width: 280px;
+    }
+    .S2-leftbox {
+        width: 270px;   
+    }
+   
+    .contacttitle {
+        width: 220px;
+        font-size: 20px;        
+    }
+    .Section6 h2 {
+        width: 220px;
+        font-size: 20px;        
+    }
+    .contacttitle:hover {
+        font-size: 15px;        
+    }
+    .Section6 h2:hover {
+        font-size: 15px;        
+    }
+    .S4pressButton {
+        width: 240px;
+        height: 64px;
+        padding: 25px 30px;
+        font-size: 20px;
+    }
+    .section2 {
+        width: 300px;
+        margin-right: 0px;
+    }
+    .S3MainBox h2 {
+        width: 290px;
+    }
+    .S2-leftbox h2 {
+        width: 275px;
+        font-size: 20px;
+    }
+    .S2-leftbox p {
+        width: 170px;        ;
+    }
+    .ComBTN {
+        width: 220px;
+        font-size: 15px;
+    }
+    .S2-leftbox :nth-child(3) {
+        font-size: 15px;
+    }
+    .ContactLeftBox {       
+        padding-left: 0;
+    }    
+    
+}  
