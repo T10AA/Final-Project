@@ -5,10 +5,14 @@ let header = document.getElementById('header');
 window.onscroll = function () {
     if (document.documentElement.scrollTop >=80) {
         header.classList.add('scrollingHeader');
+        document.getElementById('burger').classList.add('BurgerOnScroll');
     }else{
         header.classList.remove('scrollingHeader');
+        document.getElementById('burger').classList.remove('BurgerOnScroll');
     }
 };
+
+
 
 // E-mail validation
 
@@ -130,4 +134,15 @@ document.getElementById('GetStartedBTN').addEventListener('click', function() {
     window.scrollTo(0, 7200);
 });
 
+// Burger-Bar
+
+let burger = document.getElementById('burger');
+let navigation = document.getElementById('nav');
+
+burger.addEventListener('click',function() {
+    burger.classList.toggle('openedBurger');
+})
+burger.addEventListener('click',function() {
+    navigation.classList.toggle('column')
+});
 
