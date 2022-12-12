@@ -468,11 +468,12 @@ body {
 /* section 7 styling */
 .ContactSection {
     display: flex;
-    justify-content: space-between;
-    background-color: black;    
+    justify-content: center;
+    background-color: black;  
+    width: 100%;  
 }
 .ContactLeftBox {
-    width: 581px;
+    width: 50%;
     height: 795px;
     margin-top: 125px;
     margin-left: 70px;
@@ -491,8 +492,7 @@ body {
 .Text_Area {
     height: 63px;
     background-color: black;
-    width: 100%;
-    /* margin-top: 30px;   */
+    width: 100%;    
     border: 1px solid #5EB6E1;  
     resize: none;
     color: #5EB6E1;
@@ -539,13 +539,14 @@ body {
     margin-top: 30px;
 }
 .ContactRightBox {
-    width: 581px;
+    width: 50%;
     background-image: url('../images/female-bodybuilder-training-with-dumbbells.jpg');
 }
 
 
 /* footer styling */
 .footerwraper {
+    width: 100%;
     height: 580px;
     background-color: black;
     color: white;
@@ -577,6 +578,7 @@ body {
 }
 .ContactMap {
     box-shadow: 10px 10px 20px  #5EB6E1;
+    margin-right: 5px;
 }  
 
 
