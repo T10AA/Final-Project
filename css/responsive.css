@@ -1,3 +1,4 @@
+
 @media (max-width: 1452px) {   
     .S2-leftbox {
         width: 520px;
@@ -24,7 +25,8 @@
         margin-top: 150px;              
     }
     .section2 {
-        justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
     }
     .S2-rightbox {
         max-width: 400px;
@@ -41,8 +43,7 @@
     }
     .NewsBox img {
         width: 265px;
-    }
-    
+    }    
     .FooterIconWraper {
         display: none;
     }
@@ -76,17 +77,16 @@
         display: block;
     }
 }
-@media (max-width: 1215px) {
-    .first-section p,
-    .first-section h1,
-    .first-section div {        
-        margin-left: 80px;       
-    }    
-}
+
 @media (max-width: 1100px) {
     .ContactSection {
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
     .ContactLeftBox {
         width: 90%;
@@ -105,8 +105,13 @@
         display: none;
     }
     .footerwraper {
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         height: 900px;
     }
     .Trainers {
@@ -116,10 +121,7 @@
         font-size: 30px;        
     }
 }
-@media (max-width: 970px) {
-    .first-section h1 {
-        font-size: 55px;
-    }
+@media (max-width: 970px) {    
     .S2-rightbox {
         max-width: 250px;           
     }
@@ -127,14 +129,23 @@
         width: 90%;
         height: 600px;
         padding: 30px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;        
     }
     .NewsMainBox {
-        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
     }
     .NewsBox img {
         width: 455px;
@@ -158,12 +169,21 @@
         padding: 25px 50px;    
     }
     .section2 {
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
     .imageBox2 {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         max-width: 1000px;
         height: 500px;
         margin-left: 0;
@@ -179,12 +199,16 @@
         margin-left: 15px;        
     }
     .pricingMainbox {
-        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
     }
 }
 @media (max-width: 760px) {
     .imageBox2 {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         margin-top: 100px; 
     } 
     .S3MainBox {
@@ -199,7 +223,9 @@
         width: 40%;
     }
     .Users_main {
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
     .ContactLeftBox {
         padding-left: 10px;
@@ -207,8 +233,13 @@
 }
 @media (max-width: 630px) {
     .S4TrainersBox {
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
     .Trainers {
         height: 550px;
@@ -219,16 +250,6 @@
     .ContactMap {
         width: 315px;
         height: 315px;
-    }
-    .first-section h1 {
-        font-size: 35px;
-        max-width: 310px;
-    }
-    .first-section p {
-        font-size: 15px;
-    }
-    .first-section {
-        background-position: 75% 100%;
     }
     
 }
@@ -276,18 +297,16 @@
     .NewsBox p {
         font-size: 20px;
     } 
-    .first-section p,
-    .first-section h1,
-    .first-section div {        
-        margin-left: 10px;       
-    } 
+    
     .Users_main li {
         width: 100%;
     }
     .S3MainBox h2 {
         font-size: 35px;
     }   
-    
+    .Title {
+        font-size: 35px;
+    }
 }
 @media (max-width: 390px) {
     .imageBox2 img{
@@ -398,3 +417,17 @@
     }    
     
 }  
+.example {
+    display: -ms-grid;
+    display: grid;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+    background: -o-linear-gradient(top, white, black);
+    background: linear-gradient(to bottom, white, black);
+}

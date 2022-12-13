@@ -1,3 +1,4 @@
+
 /* header styling */
 header {
     position: fixed;
@@ -14,14 +15,24 @@ body {
     padding-top: 100px;
 }
 .header-Main {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 30px 110px;
-    align-items: center;    
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;    
 }
 .navigation-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     font-size: 24px;
     text-transform: capitalize;
     font-family: 'Futura PT Demi';
@@ -33,6 +44,8 @@ body {
 .NavDecor {    
     position: relative;
     text-decoration: none;
+    -webkit-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
     transition: all 0.5s linear;
 }
 .NavDecor::after {
@@ -43,6 +56,8 @@ body {
     height: 3px;
     width:0;
     background-color: #5EB6E1;
+    -webkit-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
     transition: all 0.5s linear;
     border-radius: 25%;
 }
@@ -51,7 +66,6 @@ body {
     font-weight: 600;
     font-style: italic;
 }
-
 .NavDecor:hover::after {
     width: 100%;
 }
@@ -75,8 +89,12 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     border-radius: 50px;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
     transition: all 0.4s; 
 }
 .first {
@@ -87,11 +105,15 @@ body {
 }
 .openedBurger .first {
     top: 50%;
-    transform: translate(-50%, -50%) rotate(45deg);      
+    -webkit-transform: translate(-50%, -50%) rotate(45deg);
+        -ms-transform: translate(-50%, -50%) rotate(45deg);
+            transform: translate(-50%, -50%) rotate(45deg);      
 }
 .openedBurger .third {
     top: 50%;
-    transform: translate(-50%, -50%) rotate(-45deg);      
+    -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+        -ms-transform: translate(-50%, -50%) rotate(-45deg);
+            transform: translate(-50%, -50%) rotate(-45deg);      
 }
 .openedBurger .second {
     display: none;
@@ -105,60 +127,113 @@ body {
     height: 350px;
     background-color: #5EB6E1;
     opacity: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding: 50px;
-    align-items: center; 
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; 
 }
-
 
 /* section 1 styling */
-.first-section {
+/* slider styiling */
+.sliderMainBox {
+    width: 100%;
+    height: 915px;    
+    position: relative;      
+}
+.Arrow {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);    
+    position: absolute;
+    font-size: 35px;
+    color: white;
+}
+.Left {
+    left: 40px;
+}
+.Right {    
+    right: 40px;
+}
+.DotMain {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    bottom: 40px;
+}
+.dots {
+    width: 15px;
+    height: 15px;
+    background-color:#5EB6E1;
+    border-radius: 25px;
+    margin-left: 5px;
+}
+.active {
+    width: 18px;
+    height: 18px;
+    border: 1px solid white;
+}
+.BgImage {
     width: 100%;
     height: 915px;
-    background-image: url('../images/girl-resting-after-exercises-gym_152625-820_auto_x2_auto_x2.jpg');
-    color: white;
-    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;    
 }
-.first-section p {
-    font-size: 30px;
-    margin-left: 200px;
-    padding-top: 310px;
-}
-.first-section h1 {
-    font-size: 75px;
-    max-width: 910px;
-    margin-left: 200px;
-    line-height: 1.3;
-}
-.first-section div {
-    max-width: 260px;
-    height: 90px;
-    background-color: #5EB6E1;
-    margin-left: 200px;
+.Title {
+    font-size: 60px;
+    font-weight: 600;
     text-align: center;
-    padding-top: 28px;
-    border-radius: 10px;
-    margin-top: 20px;
-    font-size: 30px;
-    color: black;
-    cursor: pointer;
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); 
+    color: white;
+    font-style: italic;
+    text-shadow: 3px 5px 5px #5EB6E1;
 }
 
 .pricingMainbox {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-top: 109px;
     margin-bottom: 252px;
 }
 .priceRange {
     width: 475px;
     height: 283px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     color: white;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 .priceRange.FirstBox {
     background-image: url('../images/Group\ 135.jpg');
@@ -193,8 +268,11 @@ body {
 
 /* section 2 styling */
 .section2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
 }
 .S2-leftbox {
     max-width: 620px;
@@ -220,13 +298,21 @@ body {
 .S2-rightbox {
     max-width: 810px;
     height: 674px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;    
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;    
 }
 .imageBox1 {
     height: 930px; 
+    display: -webkit-box; 
+    display: -ms-flexbox; 
     display: flex;
-    align-items: center;   
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;   
 }
 .imageBox2 {
     height: 930px; 
@@ -260,7 +346,9 @@ body {
     color: #5EB6E1;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
     font-size: 40px;
 }
 .Slider-arrow.left {
@@ -271,18 +359,34 @@ body {
 }
 .Users_main {
     color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     max-width: 550px;  
     margin: 60px auto; 
-    flex-wrap: wrap; 
+    -ms-flex-wrap: wrap; 
+        flex-wrap: wrap; 
 }
 .Users_main li {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     position: relative;
 }
 .Users_main img {
@@ -294,7 +398,8 @@ body {
 }
 .Users_main img:hover {
     border: 4px solid #5EB6E1;
-    box-shadow: 3px 4px 5px 5px #5EB6E1;
+    -webkit-box-shadow: 3px 4px 5px 5px #5EB6E1;
+            box-shadow: 3px 4px 5px 5px #5EB6E1;
 }
 .ComBTN {
     width: 280px;
@@ -313,15 +418,16 @@ body {
     font-size: 55px;
     color: #5EB6E1;
     margin-left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
     text-align: center;
     cursor: pointer;
     display: none;    
 }
-.Cross.active {
+.Cross.activeX {
     display: block;
 }
-
 .contact_staff {
     width: 200px;
     height: 100px;
@@ -334,15 +440,18 @@ body {
     padding-top: 30px;
     display: none;
 }
-.contact_staff.active {
+.contact_staff.activeMail {
     display: block;
 }
 
-
 /* section 4 styling */
 .S4TrainersBox {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 .S4TrainersBox :nth-child(2) {
     margin-left: 20px;
@@ -365,7 +474,8 @@ body {
 }
 .Trainers {
     height: 650px;
-    box-shadow: 2px 5px #888888;
+    -webkit-box-shadow: 2px 5px #888888;
+            box-shadow: 2px 5px #888888;
 }
 .Trainers h3 {
     font-size: 35px;
@@ -396,9 +506,26 @@ body {
     height: 499px; 
     position: relative;   
 }
+.testing {
+    width: 100%;
+    height: 100px;
+    background-color: #5EB6E1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-transition:height 2s;
+    -o-transition:height 2s;
+    transition:height 2s;
+}
+.testing:hover {
+    height: 300px;
+}
 .ImageWraper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 .Section5MainBox {
     margin-top: 20px;
@@ -426,19 +553,29 @@ body {
     width: 100%;
     height: 134px;
     background-color: black;
-    opacity: 58%;
+    opacity: 65%;
     color: white;
     position: absolute;  
-    top: 365px;
+    bottom: 0;
     z-index: 10;
+    -webkit-transition:height 2s;
+    -o-transition:height 2s;
+    transition:height 2s;
+    padding-top: 20px;
 }
-.S5imagebox p {
-    position: absolute;
-    top: 415px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 13;
+.opacityBox:hover {
+    height: 350px;
 }
+.hidden {
+    width: 80%;
+    font-size: 20px;
+    margin: 0 auto;
+    display: none;
+}
+.opacityBox:hover .hidden {
+    display: block;
+}
+
 .firstimg {
     background-image: url('../images/fit-young-woman-lifting-barbells-looking-focused-working-out-gym_155003-5353.jpg');
 }
@@ -473,8 +610,13 @@ body {
     padding: 30px;
 }
 .NewsMainBox {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 20px;
 }
 .NewsMainBox :nth-child(2) {
     margin-left: 10px;
@@ -492,21 +634,49 @@ body {
     font-size: 14px;
     line-height: 1.5;
 }
-.Section6PressButton {
+.NewsMainBox.loadNews {
+    display: none;
+}
+.LoadNewsBTN {
     max-width: 340px;
     height: 74px;
     background-color: #5EB6E1;  
     border-radius: 15px;
-    padding: 25px 90px;
+    padding: 25px 110px;
     font-size: 25px;
     margin: 60px auto;
+    cursor: pointer;
+}
+.LoadNewsBTN.passive {
+    display: none;
+}
+.CloseMark {
+    font-size: 60px;
+    color: #5EB6E1;
+    text-align: center;
+    display: none;
+    margin-top: 30px;
+}
+.CloseMark.activated {
+    display: block;
+}
+.NewImage {
+    width: 330px;
+    height: 219px;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 /* section 7 styling */
 .ContactSection {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     background-color: black;  
     width: 99%;  
+    margin-top: 50px;
 }
 .ContactLeftBox {
     width: 50%;
@@ -590,8 +760,11 @@ body {
     height: 580px;
     background-color: black;
     color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     padding: 60px 10px;
     border: 2px solid #5EB6E1;
 }
@@ -604,7 +777,9 @@ body {
 .FooterIcon {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
 }
 .contacttitle {
     font-size: 35px;
@@ -620,14 +795,15 @@ body {
     margin-left: 15px;    
 }
 .ContactMap {
-    box-shadow: 10px 10px 20px  #5EB6E1;
+    -webkit-box-shadow: 10px 10px 20px  #5EB6E1;
+            box-shadow: 10px 10px 20px  #5EB6E1;
     margin-right: 5px;
-}  
-
-
+}
 h2 {    
     position: relative;
     text-decoration: none;
+    -webkit-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
     transition: all 0.5s linear;
 }
 h2::after {
@@ -638,13 +814,14 @@ h2::after {
     height: 3px;
     width:20%;
     background-color: #5EB6E1;
+    -webkit-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
     transition: all 0.5s linear;
     border-radius: 25%;
 }
 h2:hover {
     font-size: 50px;
 }
-
 h2:hover::after {
     width: 100%;
 }

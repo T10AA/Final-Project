@@ -3,7 +3,7 @@
 let header = document.getElementById('header');
 
 window.onscroll = function () {
-    if (document.documentElement.scrollTop >=80) {
+    if (document.documentElement.scrollTop >=150) {
         header.classList.add('scrollingHeader');
         document.getElementById('burger').classList.add('BurgerOnScroll');
     }else{
@@ -73,14 +73,14 @@ function getUsers(page) {
         EmailBlock.appendChild(ContInfo);
         EmailBlock.classList.add("contact_staff");
         document.getElementById('ComBTN').addEventListener('click', function() {
-            EmailBlock.classList.add('active');
+            EmailBlock.classList.add('activeMail');
             document.getElementById('ComBTN').classList.add('passive');
-            document.getElementById('cross').classList.add('active');
+            document.getElementById('cross').classList.add('activeX');
         });
         document.getElementById('cross').addEventListener('click', function() {
-            EmailBlock.classList.remove('active');
+            EmailBlock.classList.remove('activeMail');
             document.getElementById('ComBTN').classList.remove('passive');
-            document.getElementById('cross').classList.remove('active');
+            document.getElementById('cross').classList.remove('activeX');
         });
         li.appendChild(image);
         li.appendChild(UserName);        
@@ -130,9 +130,7 @@ getUsers(currentPage);
 document.querySelector('.S4pressButton').addEventListener('click', function() {
     window.scrollTo(0, 2500);
 });
-document.getElementById('GetStartedBTN').addEventListener('click', function() {
-    window.scrollTo(0, 7200);
-});
+
 
 // Burger-Bar
 
@@ -146,3 +144,133 @@ burger.addEventListener('click',function() {
     navigation.classList.toggle('column')
 });
 
+// main section slideshow
+let data = [
+  {
+    id: 1,
+    imageUrl: 'https://i.pinimg.com/originals/a0/7d/5d/a07d5d7f2c018e0bd3e6994868cbf9e2.jpg',
+    title: 'Never give up get everything in yor hands', 
+  },
+  {
+    id: 2,
+    imageUrl: 'https://phlearn.com/wp-content/uploads/2016/08/six-pack-after-1200px.jpg',
+    title: 'Feel the strenth in your arms', 
+  },
+  {
+    id: 3,
+    imageUrl: 'https://img.freepik.com/free-photo/woman-doing-squats-smith-machine_7502-9063.jpg?w=2000',
+    title: 'Listen to your body', 
+  },
+  {
+    id: 4,
+    imageUrl: 'https://i1.wp.com/womensbest.blog/wp-content/uploads/2019/08/01_WB_Blog_Header_13.jpg?fit=1000%2C510&ssl=1',
+    title: 'Be like a wind', 
+  },
+  {
+    id: 5,
+    imageUrl: 'https://s1.1zoom.me/b5050/702/Fitness_Brunette_girl_Pose_Gym_Smile_Glance_Hands_584834_3840x2400.jpg',
+    title: 'Fitness Makes you happier', 
+  },
+];
+
+
+let leftArrow = document.getElementById('LeftArrow');
+let righttArrow = document.getElementById('RightArrow');
+let SliderBox = document.getElementById('imageContainer');
+let sliderIndex = 0;
+let activedot = document.getElementsByClassName('dots');
+
+function DivTag () {
+let Divi = document.createElement('div');
+Divi.classList.add('ImageBox');
+
+return Divi;
+}
+
+function BGimage (item) {
+let BgImage = document.createElement('div');
+BgImage.style.backgroundImage = `url(${item.imageUrl})`;
+BgImage.classList.add('BgImage');
+
+return BgImage;
+}
+
+function Title (item) {
+let SlideTitle = document.createElement('h3');
+SlideTitle.innerText = item.title;
+SlideTitle.classList.add('Title');
+
+return SlideTitle;
+}
+function CreateDots () {
+let DotBox = document.createElement('div');
+DotBox.classList.add('DotMain');
+
+data.forEach((element) => {
+  let dot = document.createElement("div");    
+  dot.classList.add("dots");
+  dot.setAttribute('data-id', element.id-1);
+  DotBox.appendChild(dot);
+  dot.addEventListener('click', function(event) {
+    let number = event.target.getAttribute("data-id");
+    sliderIndex = number;
+    Slider();
+  });
+});
+
+return DotBox;
+}
+
+function Slider () {
+SliderBox.innerHTML = ' ';
+let MainDiv = DivTag(data[sliderIndex]);
+let Image = BGimage(data[sliderIndex]);
+let imgTitle = Title(data[sliderIndex]);
+let DotParent = CreateDots();
+
+MainDiv.appendChild(Image);
+MainDiv.appendChild(imgTitle);
+SliderBox.appendChild(MainDiv);
+MainDiv.appendChild(DotParent);
+
+activedot[sliderIndex].classList.add('active');
+}
+function ClickLeftArrow () {
+if (sliderIndex == 0) {
+  sliderIndex = data.length-1;
+  Slider();
+  return;
+}
+sliderIndex--;
+Slider();
+}
+leftArrow.addEventListener('click', ClickLeftArrow);
+
+function ClickRighttArrow () {
+if (sliderIndex == data.length-1) {
+  sliderIndex = 0;
+  Slider();
+  return;
+}
+sliderIndex++;
+Slider();
+}
+righttArrow.addEventListener('click', ClickRighttArrow);
+
+setInterval(() => {
+ClickRighttArrow();
+}, 4000);
+
+Slider();
+
+// news button  functionality
+document.getElementById('LoadNewsBTN').addEventListener('click', function() {
+  document.getElementById('loadNews').classList.remove('loadNews');
+  document.getElementById('LoadNewsBTN').classList.add('passive');
+  document.getElementById('CloseMark').classList.add('activated');
+});
+document.getElementById('CloseMark').addEventListener('click', function() {
+  document.getElementById('loadNews').classList.add('loadNews');
+  document.getElementById('LoadNewsBTN').classList.remove('passive');
+  document.getElementById('CloseMark').classList.remove('activated');
+});
