@@ -431,3 +431,16 @@
     background: -o-linear-gradient(top, white, black);
     background: linear-gradient(to bottom, white, black);
 }
+@media (max-width: 330px) {
+    .headerMainIcon {
+        max-width: 80px;        
+    }
+    .burger {
+        width: 30px;
+        height: 30px;
+        right: 30px;
+    }  
+    .S3MainBox h2 {
+        width: 200px;
+    }  
+}

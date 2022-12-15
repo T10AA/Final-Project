@@ -250,19 +250,19 @@ body {
     font-size: 30px;
     margin-bottom: 5px;
 }
-.priceRange div {
+.priceRange span {
     width: 135px;
     height: 39px;
     padding: 8px 37px;
     margin-top: 26px;
 }
-.priceRange.FirstBox div {
+.priceRange.FirstBox span {
     background-color: #FF6C2C;
 }
-.priceRange.SecondBox div {
+.priceRange.SecondBox span {
     background-color: #945B9F;
 }
-.priceRange.thirdBox div {
+.priceRange.thirdBox span {
     background-color: #5EB6E1;
 }
 

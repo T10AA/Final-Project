@@ -125,7 +125,7 @@ document.getElementById("Right_arrow").addEventListener("click", function () {
 
 getUsers(currentPage);
 
-// get activated buttons
+// get activate buttons
 
 document.querySelector('.S4pressButton').addEventListener('click', function() {
     window.scrollTo(0, 2500);
@@ -148,27 +148,27 @@ burger.addEventListener('click',function() {
 let data = [
   {
     id: 1,
-    imageUrl: 'https://i.pinimg.com/originals/a0/7d/5d/a07d5d7f2c018e0bd3e6994868cbf9e2.jpg',
+    imageUrl: 'images/resized1.jpg',
     title: 'Never give up get everything in yor hands', 
   },
   {
     id: 2,
-    imageUrl: 'https://phlearn.com/wp-content/uploads/2016/08/six-pack-after-1200px.jpg',
+    imageUrl: 'images/resized2.jpg',
     title: 'Feel the strenth in your arms', 
   },
   {
     id: 3,
-    imageUrl: 'https://img.freepik.com/free-photo/woman-doing-squats-smith-machine_7502-9063.jpg?w=2000',
+    imageUrl: 'images/resized3.jpg',
     title: 'Listen to your body', 
   },
   {
     id: 4,
-    imageUrl: 'https://i1.wp.com/womensbest.blog/wp-content/uploads/2019/08/01_WB_Blog_Header_13.jpg?fit=1000%2C510&ssl=1',
+    imageUrl: 'https://i.cnnturk.com/i/cnnturk/75/1200x650/56a1f500ae784903d02bacb2.jpg',
     title: 'Be like a wind', 
   },
   {
     id: 5,
-    imageUrl: 'https://s1.1zoom.me/b5050/702/Fitness_Brunette_girl_Pose_Gym_Smile_Glance_Hands_584834_3840x2400.jpg',
+    imageUrl: 'images/resized5.jpg',
     title: 'Fitness Makes you happier', 
   },
 ];
