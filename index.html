@@ -210,21 +210,25 @@
     <section class="ContactSection" id="contactSection">
           <div class="ContactLeftBox">
               <h2>Contact Us</h2>
-              <form class="Form_wraper" action="#">
+              <form class="Form_wraper" id="Form" action="#">
                 <div>
-                    <select class="select" name="car" id="mycar">
-                        <option value="none" selected disabled hidden>Subject</option>
+                    <select class="select" name="subject">
+                        <option id="none" value="none" selected disabled hidden>Subject</option>
                         <option value="Abonnement">Abonnement</option>
                         <option value="About_Our_Classes">About Our Classes</option>
                         <option value="Healthy_Fitness">Healthy Fitness</option>  
                         <option value="About_Trainers">About Trainers</option> 
                         <option value="other">Other</option>     
                     </select>
+                    
                 </div>
                 <div><input class="Input_block" type="email" id="Mail_box" name="Mail_Block" placeholder="Email"></div>
                 <span class="Checked"><i class="fa-solid fa-check"></i></span>
                 <span id="text"></span>
-                <div><textarea class="Text_Area" name="review_Box" id="text_box" placeholder="Write Your Message Here..."></textarea></div>
+                <div>
+                    <textarea class="Text_Area" name="review_Box" id="text_box" placeholder="Write Your Message Here..."></textarea>
+                    <span class="FormErrorText" id="error_review_Box"></span>
+                </div>
                 <button class="Click_BTN" type="submit">Submit</button>
               </form>
               

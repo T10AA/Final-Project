@@ -12,7 +12,31 @@ window.onscroll = function () {
     }
 };
 
-
+// form validation
+let contactForm = document.getElementById('Form');
+contactForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+  let errors={};  
+ 
+  let textarea = document.getElementById('text_box').value;
+  if (textarea == "" && textarea.length < 5) {
+    errors.review_Box = "Message box can not be empty and must be more than 5 chaarcters";
+  }
+  document.querySelectorAll(".FormErrorText").forEach((item) => {
+    item.innerText = " ";
+  });
+  for (let key in errors) {
+    let spanText = document.getElementById("error_" + key);
+    console.log(spanText);
+    if (spanText) {
+      spanText.innerText = errors[key];
+    }
+  }
+  if (Object.keys(errors).length == 0) {
+    contactForm.submit();
+  }
+  
+});
 
 // E-mail validation
 

@@ -694,6 +694,9 @@ body {
     max-width: 600px;
     color: #5EB6E1;
 }
+.FormErrorText {
+    color: red;
+}
 .Input_block,
 .select,
 .Text_Area {
